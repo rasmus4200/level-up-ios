@@ -260,7 +260,7 @@ case .qrCode(let productCode):
 
 And if everything is a `let` or a `var` you can replace them all with a single for brevity.
 
-```switch
+```swift
 switch productBarcode {
 case let .upc(numberSystem, manufacturer, product, check):
     print("UPC : \(numberSystem), \(manufacturer), \(product), \(check).")
