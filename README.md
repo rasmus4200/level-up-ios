@@ -1,4 +1,4 @@
-# Level Up in iOS
+# Level Up in iOS 🕹
 
 Welcome! This is a repository of articles and code samples of people looking to get better at iOS.
 
