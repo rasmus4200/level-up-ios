@@ -91,32 +91,26 @@ enum Character {
         case dagger
     }
     
-    enum Helmet {
-        case wooden
-        case iron
-        case diamond
-    }
-    
-    case thief(weapon: Weapon, helmet: Helmet)
-    case warrior(weapon: Weapon, helmet: Helmet)
+    case thief(weapon: Weapon)
+    case warrior(weapon: Weapon)
     
     func getDescription() -> String {
         switch self {
-        case let .thief(weapon, helmet):
-            return "Thief chosen \(weapon) and \(helmet) helmet"
-        case let .warrior(weapon, helmet):
-            return "Warrior chosen \(weapon) and \(helmet) helmet"
+        case let .thief(weapon):
+            return "Thief chosen \(weapon)"
+        case let .warrior(weapon):
+            return "Warrior chosen \(weapon)"
         }
     }
 }
 
-let character1 = Character.warrior(weapon: .sword, helmet: .diamond)
+let character1 = Character.warrior(weapon: .sword)
 print(character1.getDescription())
-// prints "Warrior chosen sword and diamond helmet"
+// prints "Warrior chosen sword"
 
-let character2 = Character.thief(weapon: .bow, helmet: .iron)
+let character2 = Character.thief(weapon: .bow)
 print(character2.getDescription())
-//prints "Thief chosen bow and iron helmet"
+//prints "Thief chosen bow"
 ```
 
 If we want to store state (like something in a stored property) we need to rech for something more. Like a struct or a class.
