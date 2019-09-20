@@ -181,9 +181,9 @@ override func prepareForSegue(...) {
 
 ### Associated values
 
-Just when you through enums couldn’t get any more cool, you discover that enums also have the ability to contain associated values.
+Just when you through enums couldn’t get any more cool, you discover that enums also have the ability to contain associated values. 🚀
 
-Associated values are parameters you can include as part of an enum definition, to make use of later when making a decision later.
+> Associated values are parameters you can include as part of an enum definition, to make use of later when making a decision later.
 
 For example, here is a `UIView` that supports two kinds of view: `email` and `listSelection`. By defining these as enums, and passing along other relevant information about each type, you can use that information later with creating your subViews.
 
