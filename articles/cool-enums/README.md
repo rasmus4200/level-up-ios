@@ -140,7 +140,7 @@ print("\(character.type) chosen \(character.weapon)")
 
 The advantage of the `struct` is you gain the ability to store state. Which one you choose will be a matter of context and style. But both can work.
 
-## Enums as Strings
+### Enums as Strings
 
 With Swift, enums don’t have to be just integers. We can also represent enums as Strings.
 
@@ -179,7 +179,7 @@ override func prepareForSegue(...) {
 }
 ```
 
-## Associated values
+### Associated values
 
 Just when you through enums couldn’t get any more cool, you discover that enums also have the ability to contain associated values.
 
@@ -223,7 +223,7 @@ public class StandardEntryView: UIView {
 }
 ```
 
-### Tuples
+#### Tuples
 
 Swift enums also support passing values as tuples.
 
@@ -286,3 +286,309 @@ enum CompassPoint: String {
 
 print(CompassPoint.south.rawValue) // prints 'South'
 ```
+
+### Enums with Computed Properties
+
+```swift
+enum Device {
+  case iPad
+  case iPhone
+
+  var year: Int {
+    switch self {
+      case .iPhone: 
+        return 2007
+      case .iPad: 
+        return 2010
+    }
+  }
+}
+
+let device = Device.iPhone
+print(device.year)
+```
+
+Note enums can’t have stored properties. In other ways you can’t do this.
+
+```swift
+enum Device {
+  case iPad
+  case iPhone
+
+  var year: Int // BOOM!
+}
+```
+
+### Enums with mutating methods
+
+Enums by themselves have no state. But you can simulate, or toggle an enums state by having it mutate itself. By creating a mutating function that can set the implicit self parameter, use can change the state of the referenced enum itself.
+
+```swift
+enum TriStateSwitch {
+    case off
+    case low
+    case high
+    mutating func next() {
+        switch self {
+        case .off:
+            self = .low
+        case .low:
+            self = .high
+        case .high:
+            self = .off
+        }
+    }
+}
+
+var ovenLight = TriStateSwitch.off
+ovenLight.next() // ovenLight is now equal to .low
+ovenLight.next() // ovenLight is now equal to .high
+ovenLight.next() // ovenLight is now equal to .off again
+```
+
+This is really cool because it’s like a state machine within itself.
+
+### Enums with static methods
+
+```swift
+enum Device {
+    case iPhone
+    case iPad
+
+    static func getDevice(name: String) -> Device? {
+        switch name {
+        case "iPhone":
+            return .iPhone
+        case "iPad":
+            return .iPad
+        default:
+            return nil
+        }
+    }
+}
+
+if let device = Device.getDevice(name: "iPhone") {
+    print(device)
+    //prints iPhone
+}
+```
+
+### Enums with initializers
+
+```swift
+enum IntCategory {
+    case small
+    case medium
+    case big
+    case weird
+
+    init(number: Int) {
+        switch number {
+        case 0..<1000 :
+            self = .small
+        case 1000..<100000:
+            self = .medium
+        case 100000..<1000000:
+            self = .big
+        default:
+            self = .weird
+        }
+    }
+}
+
+let intCategory = IntCategory(number: 34645)
+print(intCategory)
+```
+
+### Enums and Protocols
+
+Again, blurring the line between enum and struct, but if you want an enum to confirm to a protocol, you can do it like this.
+
+```swift
+protocol LifeSpan {
+    var numberOfHearts: Int { get }
+    mutating func getAttacked() // heart -1
+    mutating func increaseHeart() // heart +1
+}
+
+enum Player: LifeSpan {
+    case dead
+    case alive(currentHeart: Int)
+
+    var numberOfHearts: Int {
+        switch self {
+        case .dead: return 0
+        case let .alive(numberOfHearts): return numberOfHearts
+        }
+    }
+
+    mutating func increaseHeart() {
+        switch self {
+        case .dead:
+            self = .alive(currentHeart: 1)
+        case let .alive(numberOfHearts):
+            self = .alive(currentHeart: numberOfHearts + 1)
+        }
+    }
+
+    mutating func getAttacked() {
+        switch self {
+        case .alive(let numberOfHearts):
+            if numberOfHearts == 1 {
+                self = .dead
+            } else {
+                self = .alive(currentHeart: numberOfHearts - 1)
+            }
+        case .dead:
+            break
+        }
+    }
+}
+
+var player = Player.dead // .dead
+
+player.increaseHeart()  // .alive(currentHeart: 1)
+print(player.numberOfHearts) //prints 1
+
+player.increaseHeart()  // .alive(currentHeart: 2)
+print(player.numberOfHearts) //prints 2
+
+player.getAttacked()  // .alive(currentHeart: 1)
+print(player.numberOfHearts) //prints 1
+
+player.getAttacked() // .dead
+print(player.numberOfHearts) // prints 0
+```
+
+### Enums and Extensions
+
+Enums can have extensions, and this is handy for when you want to separate your data structs from your methods.
+
+Note the mutating keyword. Any time you want to modify the state of an enum, a mutating method definition is needed.
+
+```swift
+enum Entities {
+    case soldier(x: Int, y: Int)
+    case tank(x: Int, y: Int)
+    case player(x: Int, y: Int)
+}
+
+extension Entities {
+    mutating func attack() {}
+    mutating func move(distance: Float) {}
+}
+
+extension Entities: CustomStringConvertible {
+    var description: String {
+        switch self {
+        case let .soldier(x, y): return "Soldier position is (\(x), \(y))"
+        case let .tank(x, y): return "Tank position is (\(x), \(y))"
+        case let .player(x, y): return "Player position is (\(x), \(y))"
+        }
+    }
+}
+```
+
+### Enums as generics
+
+Yes, you can even generize enums.
+
+```swift
+enum Information<T1, T2> {
+    case name(T1)
+    case website(T1)
+    case age(T2)
+}
+```
+
+Here the compiler is able to recognize T1 as ‘Bob’, but T2 is not defined yet. Therefore, we must define both T1 and T2 explicitly as shown below.
+
+```swift
+let info = Information.name("Bob") // Error
+
+let info =Information<String, Int>.age(20)
+print(info) //prints age(20)
+```
+
+### Other cools things
+
+#### Enums as guard clauses
+
+Another example of how enums can be used in with guard statements.
+
+```swift
+enum ChatType {
+    case authenticated
+    case unauthenticated
+}
+
+class NewChatViewController: UIViewController {
+
+    let chatType: ChatType
+
+    public init(chatType: ChatType) { ... }
+
+    guard chatType == .authenticated else {
+        return
+    }
+```
+
+#### Iterating over enums
+
+```swift
+enum Beverage: CaseIterable {
+    case coffee, tea, juice
+}
+let numberOfChoices = Beverage.allCases.count
+
+for beverage in Beverage.allCases {
+    print(beverage)
+}
+```
+
+#### Enums as Errors
+
+```swift
+public enum AFError: Error {
+
+    case invalidURL(url: URLConvertible)
+    case parameterEncodingFailed(reason: ParameterEncodingFailureReason)
+    case multipartEncodingFailed(reason: MultipartEncodingFailureReason)
+    case responseValidationFailed(reason: ResponseValidationFailureReason)
+    case responseSerializationFailed(reason: ResponseSerializationFailureReason)
+
+    public enum ParameterEncodingFailureReason {
+        case missingURL
+        case jsonEncodingFailed(error: Error)
+        case propertyListEncodingFailed(error: Error)
+    }
+
+    public var underlyingError: Error? {
+        switch self {
+        case .parameterEncodingFailed(let reason):
+            return reason.underlyingError
+        case .multipartEncodingFailed(let reason):
+            return reason.underlyingError
+        case .responseSerializationFailed(let reason):
+            return reason.underlyingError
+        default:
+            return nil
+        }
+    }
+
+}
+
+extension AFError {
+    /// Returns whether the AFError is an invalid URL error.
+    public var isInvalidURLError: Bool {
+        if case .invalidURL = self { return true }
+        return false
+    }
+}
+```
+
+## Summary
+
+`Enums` are much more than simple switch statements on type. In Swift, we can leverage enums in much more expressive creative way. Let me know if you find any more cool examples as I am still playing with all the different things you can do with these things.
+
+Happy coding!
