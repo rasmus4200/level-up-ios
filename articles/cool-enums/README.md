@@ -47,3 +47,5 @@ class Tile {
     }
 }
 ```
+
+The enum `StatusState` captures all the valid states a tile can be in, and the `Tile.status` variable is set (of type enum), a convenient `switch` statement can be used to decide what to do next.
