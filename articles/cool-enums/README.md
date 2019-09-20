@@ -115,4 +115,29 @@ print(character2.getDescription())
 
 If we want to store state (like something in a stored property) we need to rech for something more. Like a struct or a class.
 
+### Combining with Structs
+
+Deciding between pure `enums` and `enums` combined with `structs` often comes down to state. If you need state, you can get the same type and representation. You just need to convert one of the enums into a struct, and then store the enum as a type in the struct itself.
+
+```swift
+struct Character {
+    enum CharacterType {
+        case thief
+        case warrior
+    }
+    enum Weapon {
+        case bow
+        case sword
+        case dagger
+    }
+    let type: CharacterType
+    let weapon: Weapon
+}
+
+let character = Character(type: .warrior, weapon: .sword)
+print("\(character.type) chosen \(character.weapon)")
+```
+
+The advantage of the `struct` is you gain the ability to store state. Which one you choose will be a matter of context and style. But both can work.
+
 
