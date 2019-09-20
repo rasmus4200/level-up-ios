@@ -1,4 +1,4 @@
-# Cool things you can do with Swift enums
+# Cool things you can do with Swift enums ⚡
 
 [Swift Enums](https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html) are most more powerful than the traditional integer based enumerations we worked with in C. In this article I want to show you some of the cool things Swift enums can do, to make your code more readable and your programs easier to understand.
 
