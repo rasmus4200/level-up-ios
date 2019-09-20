@@ -178,3 +178,47 @@ override func prepareForSegue(...) {
     SequeIdentifer.Main.rawValue // returns the `String representation`
 }
 ```
+
+Associated values
+
+Just when you through enums couldn’t get any more cool, you discover that enums also have the ability to contain associated values.
+
+Associated values are parameters you can include as part of an enum definition, to make use of later when making a decision later.
+
+For example, here is a `UIView` that supports two kinds of view: `email` and `listSelection`. By defining these as enums, and passing along other relevant information about each type, you can use that information later with creating your subViews.
+
+```swift
+import UIKit
+
+public class StandardEntryView: UIView {
+    
+    var textField = UITextField()
+    
+    public enum Kind {
+        case email(showHeaderView: Bool)
+        case listSelection(pickerTitle: String)
+    }
+    
+    public let kind: Kind
+    
+    public init(kind: Kind = Kind.email(showHeaderView: false)) {
+        self.kind = kind
+        super.init(frame: .zero)
+        commonInit()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func commonInit() {
+        
+        switch kind {
+        case .email(let showHeaderView): // unwrapping the associated value
+            textField = makeEmailTextField(showHeaderView: showHeaderView)
+        case .listSelection(let pickerTitle):
+            textField = makeListSelection(title: pickerTitle)
+        }
+    }
+}
+```
