@@ -79,10 +79,46 @@ class NetworkReachabilityManager {
 }
 ```
 
+> Note: We aren’t actually storing any state here. Everything you see simply a type (an enum) and a computed value.
 
-By defining enums within enums, and then adding methods, we can inspect ourselves and describe what we are.
+Here is an example of an enum using a method to reflect upon itself to give a description.
 
-This looks really. But there is something subtle going on here. We aren’t actually storing any state. All we have is the type of the enum and its ability to describe itself. 
+```swift
+enum Character {
+    enum Weapon {
+        case bow
+        case sword
+        case dagger
+    }
+    
+    enum Helmet {
+        case wooden
+        case iron
+        case diamond
+    }
+    
+    case thief(weapon: Weapon, helmet: Helmet)
+    case warrior(weapon: Weapon, helmet: Helmet)
+    
+    func getDescription() -> String {
+        switch self {
+        case let .thief(weapon, helmet):
+            return "Thief chosen \(weapon) and \(helmet) helmet"
+        case let .warrior(weapon, helmet):
+            return "Warrior chosen \(weapon) and \(helmet) helmet"
+        }
+    }
+}
 
-If we want to add state to our data structure, we need to reach for one capable of storing properties. Like a `struct` or a `class`.
+let character1 = Character.warrior(weapon: .sword, helmet: .diamond)
+print(character1.getDescription())
+// prints "Warrior chosen sword and diamond helmet"
+
+let character2 = Character.thief(weapon: .bow, helmet: .iron)
+print(character2.getDescription())
+//prints "Thief chosen bow and iron helmet"
+```
+
+If we to store state (like something in a stored property) we need to rech for something more. Like a struct or a class.
+
 
