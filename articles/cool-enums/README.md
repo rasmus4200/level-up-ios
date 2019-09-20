@@ -41,7 +41,7 @@ class Tile {
             case .loading: loadingState.isHidden = false
             case .loaded: loadedState.isHidden = false
             case .failed: failedState.isHidden = false
-            case .delinquent: delinquentState?.isHidden = false
+            case .delinquent: delinquentState.isHidden = false
             }
         }
     }
