@@ -315,7 +315,7 @@ enum Device {
   case iPad
   case iPhone
 
-  var year: Int // BOOM!
+  var year: Int // 💥
 }
 ```
 
