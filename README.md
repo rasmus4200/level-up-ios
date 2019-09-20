@@ -8,4 +8,4 @@ Swift is the language we use to develop iOS applications. And an excellent place
 
 ## Articles
 
-- Cool things you can do with Enums
+- [Cool things you can do with Enums](https://github.com/jrasmusson/level-up-ios/tree/master/articles/cool-enums)
