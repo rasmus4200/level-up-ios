@@ -2,7 +2,7 @@
 
 [Swift Enums](https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html) are most more powerful than the traditional integer based enumerations we worked with in C. In this article I want to show you some of the cool things Swift enums can do, to make your code more readable and your programs easier to understand.
 
-## Swift Enums are different
+## Swift enums are different
 
 The first thing to realize about Swift enums is that they are first-class citizens. By that I mean in Swift enums support
 - Computed properties
@@ -18,7 +18,7 @@ About the only thing they can’t do are [store properties](https://docs.swift.o
 
 Because of these enhancements, there are so many more things Swift enums can do that would couldn’t in other languages. Let’s start with the basics, and then look at more advanced examples from there.
 
-### Representing State
+### Capture state
 
 Enums are great at capturing state. If you are ever wondering whether you should consider using an enum ask yourself.
 
@@ -50,7 +50,7 @@ class Tile {
 
 The enum `StatusState` captures all the valid states a tile can be in, and the `Tile.status` variable is set (of type enum), a convenient `switch` statement can be used to decide what to do next.
 
-### Expressive Types
+### Fluent Types
 
 But that’s only the tip of the iceberg. Look at how by combining enums, embedding them within eachother, and supplementing with a few simple computer properities makes checking network connectivity simple and easy.
 
@@ -115,7 +115,7 @@ print(character2.getDescription())
 
 If we want to store state (like something in a stored property) we need to rech for something more. Like a struct or a class.
 
-### Combining with Structs
+### Mix with structs
 
 Deciding between pure `enums` and `enums` combined with `structs` often comes down to state. If you need state, you can get the same type and representation. You just need to convert one of the enums into a struct, and then store the enum as a type in the struct itself.
 
@@ -140,7 +140,7 @@ print("\(character.type) chosen \(character.weapon)")
 
 The advantage of the `struct` is you gain the ability to store state. Which one you choose will be a matter of context and style. But both can work.
 
-### Enums as Strings
+### Good-bye hard coded strings
 
 With Swift, enums don’t have to be just integers. We can also represent enums as Strings.
 
@@ -179,7 +179,7 @@ override func prepareForSegue(...) {
 }
 ```
 
-### Associated values
+### Associate values
 
 Just when you through enums couldn’t get any more cool, you discover that enums also have the ability to contain associated values. 🚀
 
