@@ -22,6 +22,6 @@ Because of these enhancements, there are so many more things Swift enums can do 
 
 Enums are great at capturing state. If you are ever wondering whether you should consider using an enum ask yourself.
 
-  Does this thing represent state, and can it be represented by a set of predefined values.
+> Does this thing represent state, and can it be represented by a set of predefined values.
 
 If it does, an enum might work. Here is an example of an enum presenting the status of a tile in a `UIViewController`.
