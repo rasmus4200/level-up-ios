@@ -179,7 +179,7 @@ override func prepareForSegue(...) {
 }
 ```
 
-Associated values
+## Associated values
 
 Just when you through enums couldn’t get any more cool, you discover that enums also have the ability to contain associated values.
 
@@ -221,4 +221,68 @@ public class StandardEntryView: UIView {
         }
     }
 }
+```
+
+### Tuples
+
+Swift enums also support passing values as tuples.
+
+```swift
+enum Barcode {
+    case upc(Int, Int, Int, Int)
+    case qrCode(String)
+}
+```
+
+This can be read as:
+
+> “Define an enumeration type called Barcode, which can take either a value of upc with an associated value of type (Int, Int, Int, Int), or a value of qrCode with an associated value of type String.”
+
+This definition doesn’t provide any actual Int or String values—it just defines the type of associated values that Barcode constants and variables can store when they are equal to Barcode.upc or Barcode.qrCode.
+
+You can then create new barcodes using either type:
+
+```swift
+var productBarcode = Barcode.upc(8, 85909, 51226, 3)
+productBarcode = .qrCode("ABCDEFGHIJKLMNOP")
+```
+
+The to check what type of barcode you have by switching on them. Here you can also extract the associated value as a constant (with the `let` or `var` prefix.
+
+```swift
+switch productBarcode {
+case .upc(let numberSystem, let manufacturer, let product, let check):
+    print("UPC: \(numberSystem), \(manufacturer), \(product), \(check).")
+case .qrCode(let productCode):
+    print("QR code: \(productCode).")
+}
+```
+
+And if everything is a `let` or a `var` you can replace them all with a single for brevity.
+
+```switch
+switch productBarcode {
+case let .upc(numberSystem, manufacturer, product, check):
+    print("UPC : \(numberSystem), \(manufacturer), \(product), \(check).")
+case let .qrCode(productCode):
+    print("QR code: \(productCode).")
+}
+```
+
+### Raw values
+
+Associated values show how enumerations can declare that they store associated values of different types. As an alternative they can also come prepopulated with default values (called _raw values_) which are of the same type.
+
+```swift
+enum ASCIIControlCharacter: Character {
+    case tab = "\t"
+    case lineFeed = "\n"
+    case carriageReturn = "\r"
+}
+
+enum CompassPoint: String {
+    case north, south, east, west
+}
+
+print(CompassPoint.south.rawValue) // prints 'South'
 ```
