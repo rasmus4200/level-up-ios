@@ -25,3 +25,25 @@ Enums are great at capturing state. If you are ever wondering whether you should
 > Does this thing represent state, and can it be represented by a set of predefined values.
 
 If it does, an enum might work. Here is an example of an enum presenting the status of a tile in a `UIViewController`.
+
+```swift
+class Tile {
+    enum StatusState {
+        case loading
+        case loaded
+        case failed
+        case delinquent
+    }
+    
+    var status: StatusState {
+        didSet {
+            switch status {
+            case .loading: loadingState.isHidden = false
+            case .loaded: loadedState.isHidden = false
+            case .failed: failedState.isHidden = false
+            case .delinquent: delinquentState?.isHidden = false
+            }
+        }
+    }
+}
+```
