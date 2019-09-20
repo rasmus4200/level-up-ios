@@ -119,6 +119,6 @@ print(character2.getDescription())
 //prints "Thief chosen bow and iron helmet"
 ```
 
-If we to store state (like something in a stored property) we need to rech for something more. Like a struct or a class.
+If we want to store state (like something in a stored property) we need to rech for something more. Like a struct or a class.
 
 
