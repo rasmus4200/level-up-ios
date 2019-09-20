@@ -140,4 +140,41 @@ print("\(character.type) chosen \(character.weapon)")
 
 The advantage of the `struct` is you gain the ability to store state. Which one you choose will be a matter of context and style. But both can work.
 
+## Enums as Strings
 
+With Swift, enums don’t have to be just integers. We can also represent enums as Strings.
+
+```swift
+enum SegueIdentifier: String {
+    case Login
+    case Main
+    case Options
+}
+
+// or
+
+enum EmployeeType: String {
+    case Executive
+    case SeniorManagement = "Senior Management"
+    case Staff
+}
+```
+
+The beauty of the String, is you no longer need to have hard coded Strings spread throughout your library. You can now capture those as enum types and switch on them very conveniently.
+
+```swift
+override func prepareForSegue(...) {
+    if let identifier = segue.identifier ... {
+        switch segueIdentifier {
+        case .Login:
+            ...
+        case .Main:
+            ...
+        case .Options:
+            ...
+        }
+    }
+    
+    SequeIdentifer.Main.rawValue // returns the `String representation`
+}
+```
