@@ -489,7 +489,7 @@ case let .qrCode(productCode):
 Considering using enums any time you have predefined state. 
 
 ```swift
-enum Beverage: {
+enum Beverage {
     case coffee, tea, juice
 }
 
