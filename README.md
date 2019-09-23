@@ -5,8 +5,4 @@ Welcome! This is a repository of articles and code samples of people looking to 
 ## Swift Basics
 
 - [Enums](https://github.com/jrasmusson/level-up-ios/blob/master/basics/enums.md)
-  
-
-
-## Level UP
-- [Cool things you can do with Enums](https://github.com/jrasmusson/level-up-ios/tree/master/articles/cool-enums)
+ 
