@@ -1,4 +1,4 @@
-# Container Views 🕹
+# Container Views 
 
 <img src="https://github.com/jrasmusson/level-up-ios/blob/master/advanced/images/container-view.png" alt="drawing" />
 
@@ -109,18 +109,14 @@ By sticking a `nil` in the beginning of `addTarget` we signal that this request 
 
 ## Summary
 
-Container views are great when you have clusterings of ViewControllers that form a logical unit of operation within your app.
-
-They work by tracking state, handling viewController transitions, and can be dismissed like any other view controller when done.
+Container views are great when you have clusterings of ViewControllers that form a logical unit of operation within your app.They work by tracking state, handling viewController transitions, and can be dismissed like any other view controller when done.
 
 Always remember to call
 `view.addSubView`
 `addChild`
-`didMove`
+`didMove` when adding a child to a parent view controller. And enjoy logically grouping your viewControllers together :)
 
-When adding a child to a parent view controller. And enjoy logically grouping your viewControllers together :)
-
-Happy coding!
+Happy coding! 🤖
 
 ### Links that help
 
