@@ -1,6 +1,6 @@
-# Enums
+# Cool things you can do with Swift enums ⚡
 
-Enums are first class citizens in Swift. Here are some of the cool things they can do.
+[Swift Enums](https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html) are most more powerful than the traditional integer based enumerations we worked with in C. In this article I want to show you some of the cool things Swift enums can do, to make your code more readable and your programs easier to understand.
 
 ## Simple State Machines
 
@@ -506,4 +506,11 @@ enum Device {
 
 Predefined state is when you know all the states a collection of data can be in, and you are looking for a convenient means of grouping them together.
 
+## Summary
+
+`Enums` are much more than simple switch statements on type. In Swift, we can leverage enums in much more expressive creative way. Let me know if you find any more cool examples as I am still playing with all the different things you can do with these things.
+
 Happy coding! 🤖
+
+## Links that help
+- [Apple Docs Enum](https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html)
