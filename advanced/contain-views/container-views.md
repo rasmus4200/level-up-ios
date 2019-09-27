@@ -1,6 +1,6 @@
 # Container Views 
 
-<img src="https://github.com/jrasmusson/level-up-ios/blob/master/advanced/images/container-view.png" alt="drawing" />
+<img src="https://github.com/jrasmusson/level-up-ios/blob/master/advanced/container-views/images/container-view.png" alt="drawing" />
 
 Container views are view controllers that contain sub views, and manage and state and transition between them.
 
@@ -12,7 +12,7 @@ They are great for when you have a logical grouping of ViewControllers within yo
 
 Let’s say I have a modem I would like to activate, and I want to take the user through a series of screens depending upon whether the modem successfully activates or fails.
 
-<img src="https://github.com/jrasmusson/level-up-ios/blob/master/advanced/images/tracking-state.png" alt="drawing" />
+<img src="https://github.com/jrasmusson/level-up-ios/blob/master/advanced/container-views/images/tracking-state.png" alt="drawing" />
 
 This is a great example of where a Container View would come in handy because it would be nice to have some way of tracking what state the user flow is in, and where to go next.
 
@@ -83,7 +83,7 @@ When we are done with our Container View, and we want to return to whatever our 
 
 This app uses the Responder Chain to communicate which buttons were pressed in sub views back up to the parent ContainerView.
 
-<img src="https://github.com/jrasmusson/level-up-ios/blob/master/advanced/images/responder-chain.png" alt="drawing" />
+<img src="https://github.com/jrasmusson/level-up-ios/blob/master/advanced/container-views/images/responder-chain.png" alt="drawing" />
 
 Responder chain is an alternative to the protocol delegate pattern where `UIControl` events are fired app the view hierarchies view, and the first view that is found that can handle the request takes it.
 
