@@ -1,4 +1,4 @@
-# Container Views
+# Container Views 🕹
 
 <img src="https://github.com/jrasmusson/level-up-ios/blob/master/advanced/images/container-view.png" alt="drawing" />
 
@@ -79,7 +79,7 @@ When we are done with our Container View, and we want to return to whatever our 
     }
 ```
 
-## An aside - Responder Chains
+## An aside - Responder Chains ⚡
 
 This app uses the Responder Chain to communicate which buttons were pressed in sub views back up to the parent ContainerView.
 
