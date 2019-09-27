@@ -1,6 +1,6 @@
 # Container Views
 
-<img src="https://github.com/jrasmusson/level-up-ios/blob/master/advanced/images/container-view.png" alt="drawing" width="400"/>
+<img src="https://github.com/jrasmusson/level-up-ios/blob/master/advanced/images/container-view.png" alt="drawing" />
 
 Container views are view controllers that contain sub views, and manage and state and transition between them.
 
