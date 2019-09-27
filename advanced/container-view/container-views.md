@@ -79,6 +79,8 @@ When we are done with our Container View, and we want to return to whatever our 
     }
 ```
 
+![TableView](https://github.com/jrasmusson/level-up-ios/blob/master/advanced/container-view/images/demo.gif)
+
 ## An aside - Responder Chains ⚡
 
 This app uses the Responder Chain to communicate which buttons were pressed in sub views back up to the parent ContainerView.
