@@ -5,8 +5,8 @@ Welcome! This is a repository of articles and code samples of people looking to 
 ## Swift Basics
 
 ## Enums
-- [Cool things you can do with Enums](https://github.com/jrasmusson/level-up-ios/blob/master/basics/enums.md)
-- [Enums for style and state](https://github.com/jrasmusson/level-up-ios/blob/master/basics/enums.md)
+- [Cool things you can do with Enums](https://github.com/jrasmusson/level-up-ios/blob/master/basics/enums/cool-things.md)
+- [Enums for style and state](https://github.com/jrasmusson/level-up-ios/blob/master/basics/enums/enums-style-state.md)
  
  
  ## Advanced
