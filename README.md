@@ -9,4 +9,4 @@ Welcome! This is a repository of articles and code samples of people looking to 
  
  ## Advanced
  
- - [Container Views](https://github.com/jrasmusson/level-up-ios/blob/master/advanced/contain-views/container-views.md)
+ - [Container Views](https://github.com/jrasmusson/level-up-ios/blob/master/advanced/container-view/container-views.md)
