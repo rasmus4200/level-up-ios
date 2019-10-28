@@ -4,6 +4,7 @@ Welcome! This is a repository of articles and code samples of people looking to 
 
 ## Swift Basics
 - [Let vs Var](https://github.com/jrasmusson/level-up-ios/blob/master/basics/let-vs-var.md)
+- [Functions](https://github.com/jrasmusson/level-up-ios/blob/master/basics/functions.md)
 
 ## Enums
 - [Cool things you can do with Enums](https://github.com/jrasmusson/level-up-ios/blob/master/basics/enums/cool-things.md)
