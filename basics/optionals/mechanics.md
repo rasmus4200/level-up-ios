@@ -14,12 +14,9 @@ But if, at runtime, we aren’t yet sure what value _number_ is going to be, we 
 let number: Int?
 ```
 
-
-
-
 Think of optional as a wrapper. It’s like a gift box which wraps the value inside, and like a real-life box, _Optional_ can either contain something, or be empty.
 
-
+<img src="https://github.com/jrasmusson/ios-starter-kit/blob/master/howtos/images/turn-off-debug-console.png" alt="drawing" width="400"/>
 
 ## Why do we need them?
 
