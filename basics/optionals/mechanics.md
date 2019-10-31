@@ -167,6 +167,19 @@ let roomCount = john.residence?.numberOfRooms // This is an Optional
 
 So beware that when you are accessing _Optional_s as part of an Optional Chain, the value you get back will be of type _Int?_ and not _Int_ as you might expect.
 
+### Mechanics
+
+Know that there are several different ways _Optional_s can be represented.
+
+```swift
+let shortForm: Int? = Int("42")
+let longForm: Optional<Int> = Int("42")
+let number: Int? = Optional.some(42) // `some` is the Optional Enum type for value
+let noNumber: Int? = Optional.none // `none` is the Enum type for no value
+```
+
+We don’t really use them all. But there are handy for gaining insight into how Swift _Optional_s are implemented. And for known what is going on behind the scenes.
+
 ### Summary
 
 Optionals are Swift type that indicates a variable may or may not have a value. 
