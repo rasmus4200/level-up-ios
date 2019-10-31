@@ -7,7 +7,7 @@ Welcome! This is a repository of articles and code samples of people looking to 
 - [Functions](https://github.com/jrasmusson/level-up-ios/blob/master/basics/functions.md)
 - [Function Types](https://github.com/jrasmusson/level-up-ios/blob/master/basics/function-types.md)
 - Optionals
- - [Mechanics](https://github.com/jrasmusson/level-up-ios/blob/master/basics/optionals/mechanics.md)
+  - [Mechanics](https://github.com/jrasmusson/level-up-ios/blob/master/basics/optionals/mechanics.md)
 
 ## Enums
 - [Cool things you can do with Enums](https://github.com/jrasmusson/level-up-ios/blob/master/basics/enums/cool-things.md)
