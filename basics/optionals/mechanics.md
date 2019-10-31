@@ -44,6 +44,7 @@ So that’s what _Optional_s are and why we use them. Now let’s look at some o
 
 ## How to unwrap Optionals
 
+<img src="https://github.com/jrasmusson/level-up-ios/blob/master/basics/optionals/images/unwrapping.png" alt="drawing" width="600"/>
 
 
 There are two ways we generally unwrap Optionals. We can unwrap them nicely using the question mark (Optional binding, Nil-Coalescing, Option Chaining). Or we can force an unwrap hard with an exclamation mark.
