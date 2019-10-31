@@ -40,7 +40,7 @@ The advantages of this are
 - less cumbersome error handling - instead of having to surround everything with a _try_ catch our variable and program can continue processing (resulting in less code)
 - ease of maintenance and simplicity - because there is less code, it’s easier to reason about and maintain
 
-So that’s what _Optional_ s are and why we use them. Now let’s look at some of the different ways we can go about unwrapping them.
+So that’s what Optionals are and why we use them. Now let’s look at some of the different ways we can go about unwrapping them.
 
 ## How to unwrap Optionals
 
@@ -68,7 +68,7 @@ if let number = possibleNumber {
 
 _if let_ unwraps the _Optional_, pulls it out of the gift box, and returns a plain old _Int_. That _Int_ is then available within the_true_ scope of the if statement. And if the _Optional_ was _nil, we would be redirected to the _false_.
 
-You can also wrap _Optional_s with _guard_s.
+You can also wrap Optionals with _guard_s.
 
 ```swift
 func printNumber(possibleNumber: Int?) {
@@ -118,7 +118,7 @@ let informalGreeting = "Hi \(nickName ?? defaultName)"
 
 What this is basically doing is unwrapping _nickName_, seeing if it has an underlying value, using it if it does, and swapping in another variable if it does not.
 
-Nil-coalesers are convenient ways to swap in default values if values for _Optional_s aren’t there. They are completely safe and handy for inlining default value.
+Nil-coalesers are convenient ways to swap in default values if values for Optionals aren’t there. They are completely safe and handy for inlining default value.
 
 ### Optional Chaining
 
@@ -165,11 +165,11 @@ Note: There is a very subtle thing going on here. Even though _numberOfRooms_ is
 let roomCount = john.residence?.numberOfRooms // This is an Optional
 ```
 
-So beware that when you are accessing _Optional_ s as part of an Optional Chain, the value you get back will be of type _Int?_ and not _Int_ as you might expect.
+So beware that when you are accessing Optionals as part of an Optional Chain, the value you get back will be of type _Int?_ and not _Int_ as you might expect.
 
 ### Mechanics
 
-Know that there are several different ways _Optional_ s can be represented.
+Know that there are several different ways Optionals can be represented.
 
 ```swift
 let shortForm: Int? = Int("42")
@@ -178,7 +178,7 @@ let number: Int? = Optional.some(42) // `some` is the Optional Enum type for val
 let noNumber: Int? = Optional.none // `none` is the Enum type for no value
 ```
 
-We don’t really use them all. But there are handy for gaining insight into how Swift _Optional_ s are implemented. And for known what is going on behind the scenes.
+We don’t really use them all. But there are handy for gaining insight into how Swift Optionals are implemented. And for known what is going on behind the scenes.
 
 ### Summary
 
