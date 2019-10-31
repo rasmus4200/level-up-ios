@@ -16,7 +16,7 @@ let number: Int?
 
 Think of optional as a wrapper. It’s like a gift box which wraps the value inside, and like a real-life box, _Optional_ can either contain something, or be empty.
 
-<img src="https://github.com/jrasmusson/level-up-ios/blob/master/basics/optionals/images/example.png" alt="drawing" width="400"/>
+<img src="https://github.com/jrasmusson/level-up-ios/blob/master/basics/optionals/images/example2.png" alt="drawing" width="800"/>
 
 ## Why do we need them?
 
