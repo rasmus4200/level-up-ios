@@ -190,7 +190,20 @@ enum Optional<T> {
 And if you go look at the source code for how Optionals are implemented, you will see it is just a switch statement tied to this enum.
 
 ```swift
-
+extension Optional: CustomDebugStringConvertible {
+  /// A textual representation of this instance, suitable for debugging.
+  public var debugDescription: String {
+    switch self {
+    case .some(let value):
+      var result = "Optional("
+      debugPrint(value, terminator: "", to: &result)
+      result += ")"
+      return result
+    case .none:
+      return "nil"
+    }
+  }
+}
 ```
 
 ### Summary
