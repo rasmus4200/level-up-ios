@@ -206,6 +206,51 @@ extension Optional: CustomDebugStringConvertible {
 }
 ```
 
+## How to use
+
+### Favor concrete types
+
+Swift Optionals are great and all, but remember. Your program will be easier to reason about, and simpler, if all your variables have data. So don't use Optionals just because. Save them for those instances where you really need them, because they do in cost override in terms of maintenance and management.
+
+If you can assign a variable a value, always pick that over the Optional. Optionals force you to deal with the optionality of a variable. So if you use optionals everywhere you are going to have a lot of boiler plate code that looks like this:
+
+```swift
+if let roomCount = john.residence?.numberOfRooms {
+    print("John's residence has \(roomCount) room(s).")
+} else {
+    print("Unable to retrieve the number of rooms.")
+}
+
+if let address = john.residence?.address {
+    print("John's address is \(address) room(s).")
+} else {
+    print("Unable to retrieve address.")
+}
+```
+as opposed to this:
+
+```swift
+let roomCount = john.residence.numberOfRooms
+let address = john.residence.address
+```
+
+If our `residence` property doesn't have to be an Optional, the code is much easier to read without.
+
+## Unwrap at the beginning of your methods
+
+If you do have an Optional, unwrap with a guard as soon as you can.
+
+```swift
+guard let roomCount = john.residence?.numberOfRooms else {
+    return
+}
+
+// free to use roomCount as an Int
+```
+
+The nice thing about guards is they make Optionals concrete. They unwrap them. Doing that near the beginning of your method makes that varible concrete, and removes the Optionality of the variable early on in your program. Thus making things easier to reason about.
+
+
 ### Summary
 
 Optionals are Swift type that indicates a variable may or may not have a value. 
@@ -217,7 +262,7 @@ Four ways of unwrapping them:
 - Nil-Coalescing
 - Optional Chaining
 
-Leads to simpler easier to maintain programs.
+Use them only when you need them (favor concrete types). And remember they are nothing more than enums under the hood. So don't be intimidated by them 🚀. 
 
 ### Links that help
 
