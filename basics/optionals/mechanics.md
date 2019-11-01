@@ -236,7 +236,7 @@ let address = john.residence.address
 
 If our `residence` property doesn't have to be an Optional, the code is much easier to read without.
 
-## Unwrap at the beginning of your methods
+## Unwrap early
 
 If you do have an Optional, unwrap with a guard as soon as you can.
 
