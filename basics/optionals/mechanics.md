@@ -178,7 +178,20 @@ let number: Int? = Optional.some(42) // `some` is the Optional Enum type for val
 let noNumber: Int? = Optional.none // `none` is the Enum type for no value
 ```
 
-We don’t really use them all. But there are handy for gaining insight into how Swift Optionals are implemented. And for known what is going on behind the scenes.
+Under the hood a Swift Option is just an `enum`.
+
+```swift
+enum Optional<T> {
+   case none
+   case some<T>
+}
+```
+
+And if you go look at the source code for how Optionals are implemented, you will see it is just a switch statement tied to this enum.
+
+```swift
+
+```
 
 ### Summary
 
@@ -198,3 +211,4 @@ Leads to simpler easier to maintain programs.
 - [Apple Docs Optional](https://developer.apple.com/documentation/swift/optional)
 - [Apple Swift Documentation](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
 - [Apple Option Chaining](https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html)
+- [How to browse Swift source code]([How to browse Swift source code](https://useyourloaf.com/blog/exploring-the-swift-standard-library-source-code/))
