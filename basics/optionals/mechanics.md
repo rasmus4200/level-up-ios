@@ -211,4 +211,4 @@ Leads to simpler easier to maintain programs.
 - [Apple Docs Optional](https://developer.apple.com/documentation/swift/optional)
 - [Apple Swift Documentation](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
 - [Apple Option Chaining](https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html)
-- [How to browse Swift source code](https://useyourloaf.com/blog/exploring-the-swift-standard-library-source-code/))
+- [How to browse Swift source code](https://useyourloaf.com/blog/exploring-the-swift-standard-library-source-code/)
