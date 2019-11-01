@@ -2,10 +2,10 @@
 
 ## What is a Swift Optional?
 
-Optional is a type in the Swift language that indicates a variable may or may not have a value. For example if we know a constant will have a value of 4, we can immediately assign it that value like this.
+Optional is a type in the Swift language that indicates a variable may or may not have a value. For example if we know a constant will have a value of 42, we can immediately assign it that value like this.
 
 ```swift
-let number = Int(4)
+let number = Int(42)
 ```
 
 But if, at runtime, we aren’t yet sure what value _number_ is going to be, we can assign it an _Optional_ value like this.
