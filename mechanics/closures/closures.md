@@ -52,7 +52,7 @@ But this is long winded. A better way is as follows.
 
 Closure expression syntax has the following general form:
 
-<img src="https://github.com/jrasmusson/ios-starter-kit/blob/master/howtos/images/turn-off-debug-console.png" alt="drawing" width="400"/>
+<img src="https://github.com/jrasmusson/level-up-ios/blob/master/mechanics/closures/images/closure.png" alt="drawing" width="400"/>
 
 
 And you can inline closures into functions and methods like this.
