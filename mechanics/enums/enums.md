@@ -19,7 +19,7 @@ enum CompassPoint {
 }
 ```
 
- > Note: Swift enums don’t have integer values set by default. In example above north, south, east, west don’t implicitly equal 0,1,2,3. Instead these enumeration cases are values in their own right of type _CompassPoint_.
+ > Note: Swift enums don’t have integer values set by default. In example above north, south, east, west don’t implicitly equal 0 ,1 ,2 ,3. Instead these enumeration cases are values in their own right of type _CompassPoint_.
 
 Can define on a single line.
 
@@ -29,7 +29,7 @@ enum Planet {
 }
 ```
 
-Note when you define it is not plural _Planets_. Enums by convention are singular.
+ > Enums by convention are singular (not plural).
 
 You can assign them to variables.
 
