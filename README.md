@@ -9,7 +9,7 @@ Welcome! This is a repository of articles and code samples of people looking to 
 - [Closures](https://github.com/jrasmusson/level-up-ios/blob/master/mechanics/closures/closures.md)
 - [Enums](https://github.com/jrasmusson/level-up-ios/blob/master/mechanics/enums/enums.md)
   - [How different](https://github.com/jrasmusson/level-up-ios/blob/master/mechanics/enums/how-different.md)
-  - [Examples in how to use](https://github.com/jrasmusson/level-up-ios/blob/master/mechanics/enums/cool-things.md)
+  - [Cool Examples ⚡](https://github.com/jrasmusson/level-up-ios/blob/master/mechanics/enums/cool-things.md)
  
  
  ## Advanced
