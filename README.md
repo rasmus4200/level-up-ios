@@ -4,9 +4,7 @@ Welcome! This is a repository of articles and code samples of people looking to 
 
 ## Swift Mechanics
 - [Let vs Var](https://github.com/jrasmusson/level-up-ios/blob/master/mechanics/basics/let-vs-var.md)
-- Functions
-  - [Function Basics](https://github.com/jrasmusson/level-up-ios/blob/master/mechanics/functions/functions.md)
-  - [Function Types](https://github.com/jrasmusson/level-up-ios/blob/master/mechanics/functions/function-types.md)
+- [Functions](https://github.com/jrasmusson/level-up-ios/blob/master/mechanics/functions/functions.md)
 - [Optionals](https://github.com/jrasmusson/level-up-ios/blob/master/mechanics/optionals/optionals.md)
 - [Closures](https://github.com/jrasmusson/level-up-ios/blob/master/mechanics/closures/closures.md)
 
