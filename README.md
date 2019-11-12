@@ -7,6 +7,7 @@ Welcome! This is a repository of articles and code samples of people looking to 
 - [Functions](https://github.com/jrasmusson/level-up-ios/blob/master/mechanics/functions/functions.md)
 - [Optionals](https://github.com/jrasmusson/level-up-ios/blob/master/mechanics/optionals/optionals.md)
 - [Closures](https://github.com/jrasmusson/level-up-ios/blob/master/mechanics/closures/closures.md)
+- [Enums](https://github.com/jrasmusson/level-up-ios/blob/master/mechanics/enums/enums.md)
 
 ## Enums
 - [Cool things you can do with Enums](https://github.com/jrasmusson/level-up-ios/blob/master/basics/enums/cool-things.md)
