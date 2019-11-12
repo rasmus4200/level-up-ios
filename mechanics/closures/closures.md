@@ -292,9 +292,9 @@ var sum = numbers4.reduce(0) { $0 + $1 } // 15
 
 ### Links that help
 
-[Swift Closure](https://docs.swift.org/swift-book/LanguageGuide/Closures.html)
-[Autoclosure Sundell](https://www.swiftbysundell.com/articles/using-autoclosure-when-designing-swift-apis/)
-[Map/Filter/Reduce Use Your Loaf](https://useyourloaf.com/blog/swift-guide-to-map-filter-reduce/)
+- [Swift Closure](https://docs.swift.org/swift-book/LanguageGuide/Closures.html)
+- [Autoclosure Sundell](https://www.swiftbysundell.com/articles/using-autoclosure-when-designing-swift-apis/)
+- [Map/Filter/Reduce Use Your Loaf](https://useyourloaf.com/blog/swift-guide-to-map-filter-reduce/)
 
 
 
