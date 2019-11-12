@@ -1,19 +1,6 @@
 # Enumerations
 
-https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html
-
-- A common type for a group of related values.
-- Enables you to work with values in a type-safe way
-- If familiar with C, you will know C enumerations assign names to integers
-- Enumerations in Swift more flexible - don’t have to provide a value.
-- If value (known as _raw_ value) is provided, value can be a 
- - String
- - Character
- - Int 
- - Floating-point type
-
-
-Syntax
+An enumeration (_enum_) is common type for a group of related values that enables you to work with values in a type-safe way. If you are familiar with C, you will know C enumerations assign names to integers. Enumerations in Swift more flexible - you don’t have to provide a value.
 
 ```swift
 enum SomeEnumeration {
