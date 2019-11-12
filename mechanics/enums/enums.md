@@ -3,7 +3,7 @@
 https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html
 
 - A common type for a group of related values.
- - Enables you to work with values in a type-safe way
+  - Enables you to work with values in a type-safe way
  - If familiar with C, you will know C enumerations assign names to integers
  - Enumerations in Swift more flexible - don’t have to provide a value.
  
