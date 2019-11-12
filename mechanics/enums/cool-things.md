@@ -159,3 +159,9 @@ class NetworkReachabilityManager {
     }
 }
 ```
+
+## Summary
+
+`Enums` are much more than simple switch statements on type. In Swift, we can leverage enums in much more expressive creative way. Let me know if you find any more cool examples as I am still playing with all the different things you can do with these things.
+
+Happy coding! 🤖
