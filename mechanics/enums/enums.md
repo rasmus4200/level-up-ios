@@ -4,22 +4,22 @@ https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html
 
 - A common type for a group of related values.
   - Enables you to work with values in a type-safe way
- - If familiar with C, you will know C enumerations assign names to integers
- - Enumerations in Swift more flexible - don’t have to provide a value.
+  - If familiar with C, you will know C enumerations assign names to integers
+  - Enumerations in Swift more flexible - don’t have to provide a value.
  
 - If value (known as _raw_ value) is provided, value can be a 
- - String
- - Character
- - Int 
- - Floating-point type
+  - String
+  - Character
+  - Int 
+  - Floating-point type
 
 - Enumerations first class citizens
- - Adopt many features traditionally supported only by classes
- - Computed properties - provide additional information about enum current value
- - Instance methods - provide functionality related to value it represents
- - Initializers - provide initial case value
- - Extended - provide functionality beyond original implementation
- - Protocols - conform to interfaces to provide standard functionality
+  - Adopt many features traditionally supported only by classes
+  - Computed properties - provide additional information about enum current value
+  - Instance methods - provide functionality related to value it represents
+  - Initializers - provide initial case value
+  - Extended - provide functionality beyond original implementation
+  - Protocols - conform to interfaces to provide standard functionality
 
 Syntax
 
