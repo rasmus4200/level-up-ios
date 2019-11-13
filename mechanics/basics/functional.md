@@ -91,13 +91,14 @@ Array.filter { $0 % 2 == 1 }
 
 ## What does it all mean?
 
-What this all means for you, the up and coming Swift programming coming from an Object-Oriented background, is that you will see a different style of code when programming in Swift.
+What this all means for you, the up and coming Swift programming coming from an Object-Oriented background, is that you will see a different style of code when programming in Swift. One that
 
-- _let_ over _var_ (immutability)
-- Structs & Enums over Classes (immutability)
-- Higher order functions (map, filter, reduce)
-- Declarative over Imperative (SwiftUI over UIKit)
-- Data passed by value over reference (Stack vs Heap)
+- Favors immutability
+  - _let_ over _var_
+  - Structs & Enums over Classes
+- Leverages Higher Order Functions (map, filter, reduce)
+- Uses both Declarative over Imperative style programming (SwiftUI over UIKit)
+- Prefers passing data by value instead of by reference
 
 ### Links that help
 
