@@ -4,9 +4,9 @@ Swift embraces a lot of functional programming concepts, and unless you are comi
 
 In this first section, we are going to get you up to speed on
 
-What functional programming is
-Why it’s important
-How it affects the way your write code in the Swift language
+- What functional programming is
+- Why it’s important
+- How it affects the way your write code in the Swift language
 
 By the end of this section you will know what functional programming is, why so many languages are tilting towards it, along with a heads up in several ways it affects your programming.
 
