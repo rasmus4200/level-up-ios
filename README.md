@@ -1,4 +1,4 @@
-# Level UP in iOS 🕹 Test123
+# Level UP in iOS 🕹
 
 Welcome! This is a repository of articles and code samples of people looking to get better at iOS.
 
